@@ -1,10 +1,10 @@
 module.exports = function(body, res, latest){
 	var results;
-	//If we are doing a search (not finding latest docs)
+	//If we are finding the latest searches from database
 	if (latest) {
 		results = body;		
 	}
-	//If we are just returning the latest
+	//If we are just doing a search
 	else {
 		var data = JSON.parse(body);
     results = data.value.map(function(item){

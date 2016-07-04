@@ -3,7 +3,9 @@ var Search = require('./db-schema.js');
 module.exports = function(callback){
 
 	Search.find({}, function(err, docs){
-
+		if (err) {
+			console.log(err)
+		}
 		console.log('Sorting top 10 searches from most recent to least...')
 
 		var latestDocs = docs.sort(function(doc1, doc2){
