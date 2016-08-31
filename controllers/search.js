@@ -21,7 +21,7 @@ module.exports = function(query, os, callback){
         callback(body)       
 
         //query database and see if the search string document exists already
-        //if it does, increase # of searches by 1
+        //if it does, update time it was searched to now
         //if it does not, create a new document
 
         var userSearch = { term: query.toLowerCase() }
